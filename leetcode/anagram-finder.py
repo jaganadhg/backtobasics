@@ -21,4 +21,11 @@ def find_anagram(src_str: str, target_str: str) -> bool:
 
     return src_dict == target_dict
 
-print(find_anagram("listen", "silent")) # True
+def are_anagrams(frist_string, second_string) ->bool:
+    return sorted(frist_string.lower()) == sorted(second_string.lower())
+
+if __name__ == "__main__":
+    print(find_anagram("listen", "silent")) #  Result: True
+    print(find_anagram("Hello", "World")) # Result: False
+    print(are_anagrams("listen", "silent")) #  Result: True
+    print(are_anagrams("Hello", "World")) #  Result: False
